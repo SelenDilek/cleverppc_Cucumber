@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent extends Parent {
 
 
@@ -65,10 +67,78 @@ public class DialogContent extends Parent {
 
 
     //-----------------------us3-----------------------------------------
+    @FindBy (xpath="//*[@id='email']")
+    public WebElement eMail;
 
+    @FindBy (xpath="//*[@id='SubmitLogin']")
+    public WebElement signInButton;
+
+    @FindBy (xpath="//*[@title='Sitemap']")
+    public WebElement siteMap;
+
+    @FindBy (xpath="//*[@title='View a list of my addresses']")
+    public WebElement addresses;
+
+    @FindBy (xpath="//*[@id='center_column']//a")
+    public WebElement addAnewAddressMessage;
+
+    @FindBy (xpath="//*[@title='Add an address']")
+    public WebElement addAnewAddressButton;
+
+    @FindBy (xpath="//*[@id='center_column']//p")
+    public WebElement fillOutFormMessage;
+
+    @FindBy (xpath="//*[@id='submitAddress']")
+    public WebElement addressSaveButton;
+
+    @FindBy (xpath="(//*[@id='center_column']//p)[2]")
+    public WebElement addressErrorMessage;
+
+    @FindBy (xpath="//*[@id='address1']")
+    public WebElement address1Input;
+
+    @FindBy (xpath="//*[@id='city']")
+    public WebElement city;
+
+    @FindBy (xpath="//*[@id='id_state']")
+    public WebElement state;
+
+    @FindBy (xpath="//*[@id='postcode']")
+    public WebElement postcode;
+
+    @FindBy (xpath="//*[@id='phone_mobile']")
+    public WebElement phone_mobile;
+
+    @FindBy (xpath="//*[@id='center_column']/h1")
+    public WebElement txtMyAccount;
 
     //-----------------------us4-----------------------------------------
+    @FindBy (xpath="(//*[@title='Women'])[1]")
+    public WebElement womenButton;
 
+    @FindBy (xpath="(//*[@id='categories_block_left']//a)[4]")
+    public WebElement dressesbutton;
+
+    @FindBy (xpath="(//*[@id='categories_block_left']//li)[3]/a")
+    public WebElement summerDressesButton;
+
+    @FindBy (xpath="(//*[@id='center_column']//span)[1]")
+    public WebElement txtSummerDresses;
+
+    @FindBy (xpath="//*[@class='replace-2x img-responsive']")
+    public List<WebElement> summerDressesList;
+
+    @FindBy (xpath="//*[@title='Add to cart']")
+    public List<WebElement> addToCartButton;
+
+    @FindBy (xpath="(//*[@id='layer_cart']//span)[2]")
+    public WebElement addedToCartMessage;
+
+    @FindBy (xpath="(//*[@id='block_top_menu']//a)[9]")
+    public WebElement dressesButton1;
+
+    @FindBy (xpath="//*[@title='View my shopping cart']")
+    public WebElement cartButton;
 
     //-----------------------us5-----------------------------------------
 
@@ -80,7 +150,32 @@ public class DialogContent extends Parent {
 
 
     //-----------------------us8-----------------------------------------
+    @FindBy (xpath="//*[@id='contact-link']")
+    public WebElement contactUsButton;
 
+    @FindBy (xpath="//*[@id='center_column']/h1")
+    public WebElement contactUsMessage;
+
+    @FindBy (xpath="//*[@id='id_contact']")
+    public WebElement subjectHeadingButton;
+
+    @FindBy (xpath="//*[@id='email']")
+    public WebElement emailInput;
+
+    @FindBy (xpath="//*[@id='id_order']")
+    public WebElement orderReferenceInput;
+
+    @FindBy (xpath="//*[@id='uniform-fileUpload']")
+    public WebElement chooseFileButton;
+
+    @FindBy (xpath="//*[@id='message']")
+    public WebElement messageTextArea;
+
+    @FindBy (xpath="//*[@id='submitMessage']")
+    public WebElement sendButton;
+
+    @FindBy (xpath="//*[@id='center_column']/p")
+    public WebElement contactUsSuccessMessage;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -93,14 +188,27 @@ public class DialogContent extends Parent {
             case "SingButton":
                 return this.sign_in;
             case "SubmitLogin":
-                return SubmitLogin;
+                return this.SubmitLogin;
 
 
             //-----------------------us3-----------------------------------------
 
+            case "registerButton": return this.registerButton;
+            case "siteMap": return this.siteMap;
+            case "addresses": return this.addresses;
+            case "addAnewAddressButton": return this.addAnewAddressButton;
+            case "addressSaveButton": return this.addressSaveButton;
+            case "address1Input": return this.address1Input;
+            case "city": return this.city;
+            case "postcode": return this.postcode;
+            case "phone_mobile": return this.phone_mobile;
 
             //-----------------------us4-----------------------------------------
-
+            case "womenButton": return this.womenButton;
+            case "dressesbutton": return this.dressesbutton;
+            case "summerDressesButton": return this.summerDressesButton;
+            case "dressesButton1": return this.dressesButton1;
+            case "cartButton": return this.cartButton;
 
             //-----------------------us5-----------------------------------------
 
@@ -112,7 +220,10 @@ public class DialogContent extends Parent {
 
 
             //-----------------------us8-----------------------------------------
-
+            case "contactUsButton": return this.contactUsButton;
+            case "subjectHeadingButton": return this.subjectHeadingButton;
+            case "chooseFileButton": return this.chooseFileButton;
+            case "sendButton": return this.sendButton;
 
         }
 
