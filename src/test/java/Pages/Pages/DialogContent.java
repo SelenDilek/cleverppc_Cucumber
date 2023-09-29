@@ -9,7 +9,7 @@ public class DialogContent extends Parent {
 
 
     public DialogContent() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     //@FindBy(xpath = "//a[@class='login']")
@@ -44,426 +44,74 @@ public class DialogContent extends Parent {
     public WebElement myAccount;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //-----------------------us2-----------------------------------------
 
+    @FindBy(className = "header_user_info")
+    public WebElement sign_in;
 
+    @FindBy(css = "[id='email']")
+    public WebElement LoginEmail;
 
+    @FindBy(css = " [id='passwd']")
+    public WebElement LoginPasswrd;
 
+    @FindBy(css = "[id='SubmitLogin']")
+    public WebElement SubmitLogin;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(css = "[class='account']")
+    public WebElement myHomepage;
+    @FindBy(css = "[class='alert alert-danger']")
+    public WebElement error;
 
 
     //-----------------------us3-----------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //-----------------------us4-----------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //-----------------------us5-----------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //-----------------------us6-----------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //-----------------------us7-----------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //-----------------------us8-----------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public WebElement getWebElement(String strElement){
-        switch (strElement){
-           // case "addButton": return this.addButton;
+    public WebElement getWebElement(String strElement) {
+        switch (strElement) {
+            // case "addButton": return this.addButton;
             //-----------------------us1-----------------------------------------
-
-
-
-
-
-
 
 
             //-----------------------us2-----------------------------------------
 
-
-
-
-
-
-
+            case "SingButton":
+                return this.sign_in;
+            case "SubmitLogin":
+                return SubmitLogin;
 
 
             //-----------------------us3-----------------------------------------
 
 
-
-
-
-
-
-
-
             //-----------------------us4-----------------------------------------
-
-
-
-
-
-
-
-
-
 
 
             //-----------------------us5-----------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
             //-----------------------us6-----------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             //-----------------------us7-----------------------------------------
 
 
-            
-
             //-----------------------us8-----------------------------------------
-
-
-
-
-
-
-
-
-
-
 
 
         }
