@@ -141,7 +141,26 @@ public class DialogContent extends Parent {
     public WebElement cartButton;
 
     //-----------------------us5-----------------------------------------
+    @FindBy(xpath="//*[@id='header']/div[2]/div/div/nav/div[1]/a")
+    public WebElement signIN;
+    @FindBy(id="email")
+    public WebElement username;
 
+    @FindBy(id="passwd")
+    public WebElement password1;
+
+    @FindBy(xpath="//*[@id='SubmitLogin']/span")
+    public WebElement loginButton;
+
+    @FindBy(xpath="//*[@id='block_top_menu']/ul/li[2]")
+    public WebElement dresses;
+
+    @FindBy(xpath="//*[@id='center_column']//*[contains(text(), 'Showing 1 - 5 of 5 items')]")
+    public WebElement containText;
+    @FindBy(xpath="//span[@class='heading-counter']")
+    public WebElement fiveProduct;
+    @FindBy(xpath="//*[@id='product_list']//img")
+    public List<WebElement> items;
 
     //-----------------------us6-----------------------------------------
 
